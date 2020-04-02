@@ -27,7 +27,8 @@
       "android"
     ],
     "plugins": {
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "com.gitsta.gitstapp.plugins.GitstaCoreApiBridge": {}
     }
   }
 }
