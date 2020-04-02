@@ -28,6 +28,8 @@
         <!-- <source-file src="libs/armeabi-v7a/libgitstacoreapi.so" target-dir="libs/armeabi-v7a" /> -->
         <!-- <source-file src="libs/arm64-v8a/libgitstacoreapi.so" target-dir="libs/arm64-v8a" /> -->
         <!-- <source-file src="libs/x86/libgitstacoreapi.so" target-dir="libs/x86" /> -->
+        <!-- <source-file src="libs/x86_64/libcrypto.so" target-dir="libs/x86_64" />
+        <source-file src="libs/x86_64/libssl.so" target-dir="libs/x86_64" /> -->
         <source-file src="libs/x86_64/libgitstacoreapi.so" target-dir="libs/x86_64" />
     </platform>
 
