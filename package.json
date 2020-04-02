@@ -1,0 +1,33 @@
+{
+  "name": "com.gitsta.gitstaapp",
+  "displayName": "Gitsta",
+  "version": "1.0.0",
+  "description": "The Gitsta App.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": {
+    "name": "Jeswin Kumar",
+    "email": "jeswinpk@agilehead.com"
+  },
+  "license": "AGPL",
+  "dependencies": {
+    "cordova-android": "^8.1.0",
+    "gitsta-core-api-bridge-plugin-android": "file:gitstaCoreApiBridge/plugin"
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  }
+}

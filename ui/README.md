@@ -1,0 +1,2 @@
+# Gitsta
+Decentralized Messenger

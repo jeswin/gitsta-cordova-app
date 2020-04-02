@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com.gitsta.gitstapp.plugins.GitstaCoreApiBridge" version="0.7.0">
+
+    <name>Gitsta Core API Bridge Plugin</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <asset src="js/gitstaCoreApiBridge.js" target="js/gitstaCoreApiBridge.js"/>
+
+    <js-module src="js/gitstaCoreApiBridge.js" name="gitstaCoreApiBridge">
+        <clobbers target="gitstacoreapi" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="GitstaCoreApiBridgePlugin">
+                <param name="android-package" value="com.gitsta.gitstaapp.plugins.GitstaCoreApiBridge.GitstaCoreApiBridgePlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="android/GitstaCoreApiCallContext.java" target-dir="src/com/gitsta/gitstaapp/plugins/gitstaCoreApiBridge"/>
+
+        <source-file src="android/GitstaCoreApiBridgePlugin.java" target-dir="src/com/gitsta/gitstaapp/plugins/gitstaCoreApiBridge"/>
+
+        <source-file src="libs/armeabi/libgitstacoreapi.so" target-dir="libs/armeabi-v7a" />
+
+        <source-file src="libs/x86/libgitstacoreapi.so" target-dir="libs/x86" />
+
+        <!-- Check https://developer.android.com/ndk/guides/abis -->
+
+        <!-- <source-file src="core/api/target/i686-linux-android/release/libgitstacoreapi.so" target-dir="libs/armeabi" /> -->
+
+        <!-- <source-file src="native/android/hello-jni/src/com/example/hellojni/HelloJni.java" target-dir="src/com/example/hellojni/"/> -->
+
+        <!-- <source-file src="native/android/hello-jni/libs/armeabi-v7a/libhello-jni.so" target-dir="libs/armeabi-v7a" /> -->
+    </platform>
+
+    <!-- <platform name="ios">
+
+        <config-file target="config.xml" parent="/widget">
+            <feature name="Hello">
+                <param name="ios-package" value="HWPHello" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
+        <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
+        <header-file src="native/rust/src/hello_rust.h" target-dir="HelloPlugin"/>
+        <source-file src="native/ios/libhello_rust-ios.a" framework="true" target-dir="HelloPlugin" compiler-flags="-fno-objc-arc"/>
+
+        <framework src="Foundation.framework" />
+        <framework src="Security.framework" />
+
+    </platform> -->
+
+</plugin>
