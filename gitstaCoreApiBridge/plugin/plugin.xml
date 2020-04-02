@@ -24,17 +24,11 @@
 
         <source-file src="android/GitstaCoreApiBridgePlugin.java" target-dir="src/com/gitsta/gitstaapp/plugins/gitstaCoreApiBridge"/>
 
-        <source-file src="libs/armeabi/libgitstacoreapi.so" target-dir="libs/armeabi-v7a" />
-
-        <source-file src="libs/x86/libgitstacoreapi.so" target-dir="libs/x86" />
-
         <!-- Check https://developer.android.com/ndk/guides/abis -->
-
-        <!-- <source-file src="core/api/target/i686-linux-android/release/libgitstacoreapi.so" target-dir="libs/armeabi" /> -->
-
-        <!-- <source-file src="native/android/hello-jni/src/com/example/hellojni/HelloJni.java" target-dir="src/com/example/hellojni/"/> -->
-
-        <!-- <source-file src="native/android/hello-jni/libs/armeabi-v7a/libhello-jni.so" target-dir="libs/armeabi-v7a" /> -->
+        <!-- <source-file src="libs/armeabi-v7a/libgitstacoreapi.so" target-dir="libs/armeabi-v7a" /> -->
+        <!-- <source-file src="libs/arm64-v8a/libgitstacoreapi.so" target-dir="libs/arm64-v8a" /> -->
+        <!-- <source-file src="libs/x86/libgitstacoreapi.so" target-dir="libs/x86" /> -->
+        <source-file src="libs/x86_64/libgitstacoreapi.so" target-dir="libs/x86_64" />
     </platform>
 
     <!-- <platform name="ios">
