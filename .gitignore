@@ -113,3 +113,6 @@ www/
 gitstaCoreApiBridge/plugin/libs/
 platforms/
 plugins/
+
+# vscode
+.vscode
