@@ -13,8 +13,9 @@ rm -rf gitstaCoreApiBridge/plugin/libs
 # cp ../gitsta-coreapi/target/i686-linux-android/release/*.so gitstaCoreApiBridge/plugin/libs/x86
 
 mkdir -p gitstaCoreApiBridge/plugin/libs/x86_64
-# cp ../gitsta-coreapi/deps/openssl/libcrypto.so.1.1 gitstaCoreApiBridge/plugin/libs/x86_64/libcrypto.so
-# cp ../gitsta-coreapi/deps/openssl/libssl.so.1.1 gitstaCoreApiBridge/plugin/libs/x86_64/libssl.so
-cp ../gitsta-coreapi/target/x86_64-linux-android/release/*.so gitstaCoreApiBridge/plugin/libs/x86_64
+cp ../gitsta-coreapi/target/x86_64-linux-android/release/libgitstacoreapi.so gitstaCoreApiBridge/plugin/libs/x86_64/libgitstacoreapi.so
+# We won't need these.
+# cp ../openssl_for_ios_and_android/output/openssl_111_android_build/x86_64/usr/local/lib/libcrypto.so gitstaCoreApiBridge/plugin/libs/x86_64/libcrypto.so
+# cp ../openssl_for_ios_and_android/output/openssl_111_android_build/x86_64/usr/local/lib/libssl.so gitstaCoreApiBridge/plugin/libs/x86_64/libssl.so
 
 cordova plugin remove com.gitsta.gitstapp.plugins.GitstaCoreApiBridge; cordova plugin add gitstaCoreApiBridge/plugin && cordova build && cordova run android
