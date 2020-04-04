@@ -17,12 +17,17 @@ import android.util.Log;
 
 import com.gitsta.gitstaapp.plugins.GitstaCoreApiBridge.GitstaCoreApiCallContext;
 
-// TODO: This leaks memory. Call free defined in lib.rs
+/*
+   TODO: This leaks memory. Call free defined in lib.rs
+  Gotta do two things:
+    1. Release all strings created coreside.
+    2. Release the ApiCallContext once async action is complete.
+*/
 
 public class GitstaCoreApiBridgePlugin extends CordovaPlugin {
   private native void coreapiinit();
 
-  private native String coreapicall(String action, String args);
+  private native String coreapicallsync(String action, String args);
 
   private static final int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
 
@@ -66,7 +71,7 @@ public class GitstaCoreApiBridgePlugin extends CordovaPlugin {
   }
 
   private boolean invoke(String coreApiAction, String coreApiArgs, CallbackContext callbackContext) {
-    String result = coreapicall(coreApiAction, coreApiArgs);
+    String result = coreapicallsync(coreApiAction, coreApiArgs);
     callbackContext.success(result);
     return true;
   }
